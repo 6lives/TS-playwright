@@ -19,7 +19,7 @@ test.describe('Tests for sign up modal', async () => {
     await page.goto('/')
   })
   
-  test.only('Open twitch sign up form and complete it', async ({ page }) => {
+  test('Open twitch sign up form and complete it', async ({ page }) => {
   
     const homePage = new HomePageTS(page)
     const signUpPage = new SignUpPageTS(page)

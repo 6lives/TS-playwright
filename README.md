@@ -25,7 +25,11 @@ Allure report is also used in this project to build cool looking test reports an
    ```bash
    npx playwright test
    ```
-   to run all tests
+   to run all tests or
+   ```bash
+   npx playwright test --headed
+   ```
+   to see how is test going in browser
 11) run
    ```bash
    npx playwright show-report
@@ -36,3 +40,8 @@ Allure report is also used in this project to build cool looking test reports an
    allure-serve allure-results
    ```
    to build and open allure report
+
+# Configuration
+
+Settings can be changed in ```playwright.config.ts```
+doc: https://playwright.dev/docs/test-configuration
