@@ -25,7 +25,7 @@ Allure report is also used in this project to build cool looking test reports an
    ```bash
    npx playwright test
    ```
-   to run all tests in this repo
+   to run all tests
 11) run
    ```bash
    npx playwright show-report
