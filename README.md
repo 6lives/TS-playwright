@@ -44,4 +44,5 @@ Allure report is also used in this project to build cool looking test reports an
 # Configuration
 
 Settings can be changed in ```playwright.config.ts```
-doc: https://playwright.dev/docs/test-configuration
+By default tests are running on single worker (1 thread), so they are not parallel.
+Documentation: https://playwright.dev/docs/test-configuration
