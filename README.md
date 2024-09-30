@@ -12,17 +12,27 @@ Allure report is also used in this project to build cool looking test reports an
 3) install npm (pnpm/npx)
 4) clone repo
 5) from the project root run
-   ```bash npx i```
+   ```bash
+   npx i
+   ```
    to install all dependencies
-6) run
-   ```bash npx playwright install```
-   to install all browsers (will be used to run tests)
 7) run
-   ```bash npx playwright test```
-   to run all tests in this repo
-8) run
-   ```bash npx playwright show-report```
-   to open html playwright tests report
+   ```bash
+   npx playwright install
+   ```
+   to install all browsers (will be used to run tests)
 9) run
-   ```bash allure-serve allure-results```
+   ```bash
+   npx playwright test
+   ```
+   to run all tests in this repo
+11) run
+   ```bash
+   npx playwright show-report
+   ```
+   to open html playwright tests report
+13) run
+   ```bash
+   allure-serve allure-results
+   ```
    to build and open allure report
