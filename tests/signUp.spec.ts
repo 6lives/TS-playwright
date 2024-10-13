@@ -19,10 +19,12 @@ test.describe('Tests for sign up modal', async () => {
     await page.goto('/')
   })
   
-  test('Open twitch sign up form and complete it', async ({ page }) => {
+  test('Open twitch sign up form, fill with correct values, finish with signup button, expect response codes', async ({ page }) => {
   
     const homePage = new HomePageTS(page)
     const signUpPage = new SignUpPageTS(page)
+    const integrityStatusCode = 200
+    const protected_registerStatusCode = 400
   
     await homePage.assertPageisOpenedCorrectly()
     await homePage.clickOnSignUpButton()
@@ -32,9 +34,8 @@ test.describe('Tests for sign up modal', async () => {
     await signUpPage.clickUseEmailButton()
     await signUpPage.fillAllFields(fields)
     await signUpPage.expectSignUpButtonIsActive()
-    await signUpPage.clickOnSignUpButton()
-  
-    await page.waitForTimeout(10 * 1000)
+    await signUpPage.expectSignUpRequstsHaveStatusCode(integrityStatusCode, protected_registerStatusCode)
+    await page.pause()
   });
 })
 
