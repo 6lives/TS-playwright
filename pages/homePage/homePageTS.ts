@@ -1,13 +1,13 @@
 import { expect, Page } from "@playwright/test";
 import { HomePagePO } from "./homePagePO";
 import * as allure from "allure-js-commons";
+import { BaseTS } from "../baseTS";
 
-export class HomePageTS {
-    private page: Page
+export class HomePageTS extends BaseTS {
     private homePagePo: HomePagePO
 
     constructor(page: Page) {
-        this.page = page
+        super(page)
         this.homePagePo = new HomePagePO(this.page)
     }
 

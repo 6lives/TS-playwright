@@ -2,13 +2,13 @@ import { expect, Page } from "@playwright/test";
 import { SignUpPagePO } from "./signUpPO";
 import * as allure from "allure-js-commons"
 import { SignUpField, SignUpFieldType } from "../../types/signUpTypes";
+import { BaseTS } from "../baseTS";
 
-export class SignUpPageTS {
-    private page: Page
+export class SignUpPageTS extends BaseTS {
     private signUpPagePo: SignUpPagePO
 
     constructor(page: Page) {
-        this.page = page
+        super(page)
         this.signUpPagePo = new SignUpPagePO(this.page)
     }
 
